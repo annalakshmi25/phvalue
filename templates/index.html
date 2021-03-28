@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+    <head>
+        <title>ph value</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+
+<body>
+    <div class="login-box">
+        <h1>DETERMINATION OF PH VALUE</h1>
+        <h2>Support Vector Machine</h2>
+        <form action="calculate">
+            <div class="user-box1">
+                <input type="text" name="exp1" value="{{exp1}}" required="">
+                <label>Blue:</label></div>
+            <div class="user-box2">
+                <input type="text" name="exp2" value="{{exp2}}" required="">
+                <label>Green:</label>
+            </div>
+            <div class="user-box3">
+                <input type="text" name="exp3" value="{{exp3}}" required="">
+                <label>Red:</label>
+            </div>
+            
+            <input type="submit" name="submit" value="predict" class="submitbtn" />
+        </form><br>
+        <h2>pH value: {{predicted}}</h2>
+    </div>
+</body>
+
+</html>
